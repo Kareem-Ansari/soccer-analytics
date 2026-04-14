@@ -1,0 +1,40 @@
+# Google Drive paths — everything persistent lives here
+drive:
+  root: "/content/drive/MyDrive/soccer_analytics"
+  data: "/content/drive/MyDrive/soccer_analytics/data"
+  weights: "/content/drive/MyDrive/soccer_analytics/weights"
+  outputs: "/content/drive/MyDrive/soccer_analytics/outputs"
+  dataset: "/content/drive/MyDrive/soccer_analytics/dataset"
+  checkpoints: "/content/drive/MyDrive/soccer_analytics/checkpoints"
+
+# Video
+video:
+  filename: "match.mp4"
+  url: "https://assets.mixkit.co/videos/preview/mixkit-a-soccer-game-on-a-sunny-outdoor-grass-pitch-34717-large.mp4"
+
+# Model
+model:
+  base: "yolo11n.pt"          # base pretrained — note: using yolo11 not 26 (explained below)
+  finetuned: "best.pt"
+  confidence: 0.3
+  iou: 0.5
+
+# Dataset — Roboflow
+dataset:
+  workspace: "roboflow-jvuqo"
+  project: "football-players-detection-3zvbc"
+  version: 14
+  format: "yolov8"
+
+# Training
+training:
+  epochs: 25                  # purposeful — 25 on A100 is enough, saves units
+  imgsz: 640
+  batch: 32
+  patience: 7
+  device: 0
+
+# Tracking
+tracking:
+  tracker: "bytetrack.yaml"
+  trace_length: 40
