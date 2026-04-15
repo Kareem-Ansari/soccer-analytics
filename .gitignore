@@ -35,6 +35,26 @@ data/
 outputs/
 runs/
 
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+*.mp4
+*.mkv
+*.avi
+*.pt
+*.pth
+*.onnx
+data/
+outputs/preview_frames/
+runs/
+checkpoints/
+secrets.json
+.env
+*.key
+.DS_Store
+Thumbs.db
+.vscode/
+
 # Secrets
 .env
 secrets.json
