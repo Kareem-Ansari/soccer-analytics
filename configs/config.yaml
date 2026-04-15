@@ -1,40 +1,51 @@
-# Google Drive paths — everything persistent lives here
 drive:
   root: "/content/drive/MyDrive/soccer_analytics"
   data: "/content/drive/MyDrive/soccer_analytics/data"
+  soccernet: "/content/drive/MyDrive/soccer_analytics/data/soccernet"
   weights: "/content/drive/MyDrive/soccer_analytics/weights"
   outputs: "/content/drive/MyDrive/soccer_analytics/outputs"
-  dataset: "/content/drive/MyDrive/soccer_analytics/dataset"
   checkpoints: "/content/drive/MyDrive/soccer_analytics/checkpoints"
+  previews: "/content/drive/MyDrive/soccer_analytics/outputs/previews"
+  metrics: "/content/drive/MyDrive/soccer_analytics/outputs/metrics"
 
-# Video
-video:
-  filename: "match.mp4"
-  url: "https://assets.mixkit.co/videos/preview/mixkit-a-soccer-game-on-a-sunny-outdoor-grass-pitch-34717-large.mp4"
+repo:
+  url: "https://github.com/Kareem-Ansari/soccer-analytics.git"
+  dir: "/content/soccer-analytics"
+  name: "Kareem-Ansari"
+  email: "ansarikareemwork@gmail.com"
 
-# Model
+soccernet:
+  local_dir: "/content/drive/MyDrive/soccer_analytics/data/soccernet"
+  task_tracking: "tracking"
+  task_tracking_2023: "tracking-2023"
+  splits_tracking: ["train", "test", "challenge"]
+  splits_2023: ["train", "test", "challenge"]
+  clip_duration_seconds: 30
+  fps: 25
+  resolution: "1080p"
+
 model:
-  base: "yolo11n.pt"          # base pretrained — note: using yolo11 not 26 (explained below)
-  finetuned: "best.pt"
-  confidence: 0.3
+  base: "yolo11n.pt"
+  finetuned: "best_soccernet.pt"
+  confidence: 0.35
   iou: 0.5
+  input_size: 1280
 
-# Dataset — Roboflow
-dataset:
-  workspace: "roboflow-jvuqo"
-  project: "football-players-detection-3zvbc"
-  version: 14
-  format: "yolov8"
-
-# Training
 training:
-  epochs: 25                  # purposeful — 25 on A100 is enough, saves units
-  imgsz: 640
-  batch: 32
+  epochs: 30
+  imgsz: 1280
+  batch: 8
   patience: 7
   device: 0
+  save_period: 5
+  workers: 2
 
-# Tracking
 tracking:
   tracker: "bytetrack.yaml"
-  trace_length: 40
+  trace_length: 50
+  min_hits: 3
+  track_thresh: 0.35
+
+evaluation:
+  iou_threshold: 0.5
+  max_age: 30
