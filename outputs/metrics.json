@@ -1,0 +1,116 @@
+{
+  "model": "best_soccernet.pt",
+  "training_map50": 0.9152,
+  "training_precision": 0.9282,
+  "training_recall": 0.8772,
+  "sequences_evaluated": 10,
+  "iou_threshold": 0.5,
+  "overall_precision": 0.9785,
+  "overall_recall": 0.8043,
+  "overall_f1": 0.8829,
+  "total_tp": 85432,
+  "total_fp": 1880,
+  "total_fn": 20790,
+  "per_sequence": [
+    {
+      "sequence": "SNMOT-116",
+      "frames": 750,
+      "tp": 8775,
+      "fp": 351,
+      "fn": 2685,
+      "precision": 0.9615,
+      "recall": 0.7657,
+      "f1": 0.8525
+    },
+    {
+      "sequence": "SNMOT-117",
+      "frames": 750,
+      "tp": 7462,
+      "fp": 124,
+      "fn": 1709,
+      "precision": 0.9837,
+      "recall": 0.8137,
+      "f1": 0.8906
+    },
+    {
+      "sequence": "SNMOT-118",
+      "frames": 750,
+      "tp": 9166,
+      "fp": 172,
+      "fn": 1753,
+      "precision": 0.9816,
+      "recall": 0.8395,
+      "f1": 0.905
+    },
+    {
+      "sequence": "SNMOT-119",
+      "frames": 750,
+      "tp": 6798,
+      "fp": 133,
+      "fn": 1745,
+      "precision": 0.9808,
+      "recall": 0.7957,
+      "f1": 0.8786
+    },
+    {
+      "sequence": "SNMOT-120",
+      "frames": 750,
+      "tp": 9172,
+      "fp": 109,
+      "fn": 2523,
+      "precision": 0.9883,
+      "recall": 0.7843,
+      "f1": 0.8745
+    },
+    {
+      "sequence": "SNMOT-121",
+      "frames": 750,
+      "tp": 10258,
+      "fp": 270,
+      "fn": 1031,
+      "precision": 0.9744,
+      "recall": 0.9087,
+      "f1": 0.9404
+    },
+    {
+      "sequence": "SNMOT-122",
+      "frames": 750,
+      "tp": 8936,
+      "fp": 169,
+      "fn": 2713,
+      "precision": 0.9814,
+      "recall": 0.7671,
+      "f1": 0.8611
+    },
+    {
+      "sequence": "SNMOT-123",
+      "frames": 750,
+      "tp": 10563,
+      "fp": 168,
+      "fn": 1828,
+      "precision": 0.9843,
+      "recall": 0.8525,
+      "f1": 0.9137
+    },
+    {
+      "sequence": "SNMOT-124",
+      "frames": 750,
+      "tp": 7492,
+      "fp": 210,
+      "fn": 2210,
+      "precision": 0.9727,
+      "recall": 0.7722,
+      "f1": 0.861
+    },
+    {
+      "sequence": "SNMOT-125",
+      "frames": 750,
+      "tp": 6810,
+      "fp": 174,
+      "fn": 2593,
+      "precision": 0.9751,
+      "recall": 0.7242,
+      "f1": 0.8311
+    }
+  ]
+}
