@@ -32,8 +32,17 @@ MANIFEST
 *.pth
 *.avi
 data/
-outputs/
 runs/
+# Large binary outputs - stay on Drive only
+outputs/*.mp4
+outputs/*.avi
+outputs/*.mkv
+outputs/*.gif
+
+# Keep these tracked on GitHub
+# outputs/training_plots/  <- tracked
+# outputs/preview_frames/  <- tracked
+# outputs/metrics.json     <- tracked
 
 __pycache__/
 *.py[cod]
@@ -45,7 +54,7 @@ __pycache__/
 *.pth
 *.onnx
 data/
-outputs/preview_frames/
+outputs/preview_framess
 runs/
 checkpoints/
 secrets.json
