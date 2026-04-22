@@ -105,23 +105,23 @@ SoccerNet tracking-2023 — NDA required: [soccer-net.org](https://soccer-net.or
 ## Project Structure
 soccer-analytics/
 ├── configs/
-│   └── config.yaml              all paths and hyperparameters
+│   └── config.yaml
 ├── src/
-│   ├── detector.py              YOLO11 detection wrapper
-│   ├── tracker.py               ByteTrack wrapper
-│   ├── annotator.py             frame annotation pipeline
-│   └── utils.py                 shared utility functions
+│   ├── detector.py
+│   ├── tracker.py
+│   ├── annotator.py
+│   └── utils.py
 ├── notebooks/
-│   ├── 01_setup_and_data.ipynb  environment and data setup
-│   ├── 02_download_soccernet.ipynb  SoccerNet download
-│   ├── 03_train.ipynb           annotation conversion + training
-│   ├── 04_detect_and_track.ipynb  inference + evaluation
-│   └── 05_visualize.ipynb       results + README generation
+│   ├── 01_setup_and_data.ipynb
+│   ├── 02_download_soccernet.ipynb
+│   ├── 03_train.ipynb
+│   ├── 04_detect_and_track.ipynb
+│   └── 05_visualize.ipynb
 ├── outputs/
-│   ├── training_plots/          loss curves and metric plots
-│   ├── preview_frames/          sample annotated frames
-│   ├── metrics.json             full evaluation results
-│   └── demo.gif                 demo animation
+│   ├── training_plots/
+│   ├── preview_frames/
+│   ├── metrics.json
+│   └── demo.gif
 ├── requirements.txt
 └── README.md
 
