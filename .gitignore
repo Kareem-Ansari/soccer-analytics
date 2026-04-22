@@ -32,7 +32,12 @@ MANIFEST
 *.pth
 *.avi
 data/
-outputs/
+# outputs - block large files but allow plots and metrics
+outputs/preview_frames/
+outputs/*.mp4
+outputs/*.avi
+outputs/*.mkv
+outputs/*.gif
 runs/
 
 __pycache__/
