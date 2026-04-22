@@ -137,15 +137,10 @@ Trained weights available on request.
 
 ---
 
-## Citation
+## Dataset Credit
 
-```bibtex
-@inproceedings{cioppa2022soccernet,
-  title={SoccerNet-Tracking: Multiple Object Tracking Dataset
-         and Benchmark in Soccer Videos},
-  author={Cioppa, Anthony and Giancola, Silvio and others},
-  booktitle={Proceedings of the IEEE/CVF Conference on
-             Computer Vision and Pattern Recognition},
-  year={2022}
-}
-```
+This project uses the SoccerNet tracking-2023 dataset created by
+Anthony Cioppa, Silvio Giancola, and colleagues at KAUST and
+University of Liege. Published at CVPR 2022.
+
+More information: [soccer-net.org](https://soccer-net.org)
