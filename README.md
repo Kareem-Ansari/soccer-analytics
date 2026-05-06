@@ -89,6 +89,30 @@ annotated output video + evaluation metrics JSON
 
 ---
 
+
+## Analytics Dashboard
+
+Real-time analytics dashboard built on PostgreSQL detection data.
+Generated from YOLO11 inference across 3 SoccerNet test sequences
+(300 frames total, 1080p broadcast footage).
+
+### Player Count Over Time
+![Players Per Frame](outputs/dashboard/players_per_frame.png)
+
+### Detection Confidence Distribution
+![Confidence Distribution](outputs/dashboard/confidence_dist.png)
+
+### Sequence Comparison
+![Sequence Comparison](outputs/dashboard/sequence_comparison.png)
+
+### Dashboard Overview
+![Dashboard Overview](outputs/dashboard/dashboard_overview.png)
+
+The dashboard config is available as a Grafana JSON export
+at `grafana/dashboard.json` and can be imported into any
+Grafana instance connected to a PostgreSQL data source.
+
+---
 ## Dataset
 
 SoccerNet tracking-2023 — NDA required: [soccer-net.org](https://soccer-net.org)
@@ -137,6 +161,30 @@ Trained weights available on request.
 
 ---
 
+
+## Analytics Dashboard
+
+Real-time analytics dashboard built on PostgreSQL detection data.
+Generated from YOLO11 inference across 3 SoccerNet test sequences
+(300 frames total, 1080p broadcast footage).
+
+### Player Count Over Time
+![Players Per Frame](outputs/dashboard/players_per_frame.png)
+
+### Detection Confidence Distribution
+![Confidence Distribution](outputs/dashboard/confidence_dist.png)
+
+### Sequence Comparison
+![Sequence Comparison](outputs/dashboard/sequence_comparison.png)
+
+### Dashboard Overview
+![Dashboard Overview](outputs/dashboard/dashboard_overview.png)
+
+The dashboard config is available as a Grafana JSON export
+at `grafana/dashboard.json` and can be imported into any
+Grafana instance connected to a PostgreSQL data source.
+
+---
 ## Dataset Credit
 
 This project uses the SoccerNet tracking-2023 dataset created by
