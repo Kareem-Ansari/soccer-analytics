@@ -1,0 +1,88 @@
+{
+  "title": "Soccer Analytics Dashboard",
+  "uid": "soccer-analytics-v1",
+  "version": 1,
+  "schemaVersion": 36,
+  "tags": [
+    "soccer",
+    "tracking",
+    "yolo",
+    "soccernet"
+  ],
+  "panels": [
+    {
+      "id": 1,
+      "title": "Players Detected Per Frame",
+      "type": "timeseries",
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "targets": [
+        {
+          "rawSql": "SELECT time, COUNT(*) as player_count FROM detections GROUP BY time ORDER BY time",
+          "format": "time_series"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Total Detections by Sequence",
+      "type": "bargauge",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 8
+      },
+      "targets": [
+        {
+          "rawSql": "SELECT sequence_name, COUNT(*) as detections FROM detections GROUP BY sequence_name",
+          "format": "table"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Average Confidence Score",
+      "type": "stat",
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 12,
+        "y": 8
+      },
+      "targets": [
+        {
+          "rawSql": "SELECT AVG(confidence) as avg_confidence FROM detections",
+          "format": "table"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Unique Players Tracked",
+      "type": "stat",
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 18,
+        "y": 8
+      },
+      "targets": [
+        {
+          "rawSql": "SELECT COUNT(DISTINCT track_id) as unique_players FROM detections",
+          "format": "table"
+        }
+      ]
+    }
+  ],
+  "datasource": {
+    "type": "postgres",
+    "url": "localhost:5432",
+    "database": "soccer_analytics",
+    "user": "postgres"
+  }
+}
